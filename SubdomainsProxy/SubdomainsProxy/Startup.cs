@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SubdomainsProxy.Middlewares;
 
 namespace SubdomainsProxy
 {
@@ -45,9 +46,9 @@ namespace SubdomainsProxy
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
             app.UseStaticFiles();
-            app.UseCookiePolicy();
+
+            app.UseMiddleware<SubdomainsMiddleware>();
 
             app.UseMvc(routes =>
             {
