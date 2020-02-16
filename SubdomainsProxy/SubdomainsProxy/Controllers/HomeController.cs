@@ -5,39 +5,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SubdomainsProxy.Models;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace SubdomainsProxy.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(
+            [FromServices] IConfiguration configuration)
         {
-            return View();
+            var model = GetLinksOnServicesFromConfiguration(configuration);
+            return View(model);
         }
 
-        public IActionResult About()
+        private LinksOnServicesViewModel GetLinksOnServicesFromConfiguration(IConfiguration configuration) //todo: add caching
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return configuration.GetSection("LinksOnServices").Get<LinksOnServicesViewModel>();
         }
     }
 }
