@@ -57,12 +57,12 @@ using SubdomainsProxy.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(25, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "492b7e95fc124782b54e6cec1341d426", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b585b05808eb49ffbf815e0d9ca988e9", async() => {
                 BeginContext(31, 33, true);
                 WriteLiteral("\r\n    <meta charset=\"utf-8\" />\r\n\t");
                 EndContext();
                 BeginContext(64, 47, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7642ed3a5a274b198d91c29882f1673b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "4c034f3148c547e7979fab275f1ba2e9", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -96,7 +96,7 @@ using SubdomainsProxy.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(122, 130, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ffab8a071c9e41c38a153a719383e06b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c9c2c8f9f9d1426ea8631e93dfb96312", async() => {
                 BeginContext(128, 55, true);
                 WriteLiteral("\r\n\t<div class=\"header\">\r\n\t\tInGames\r\n\t</div>\r\n\t<br />\r\n\t");
                 EndContext();
