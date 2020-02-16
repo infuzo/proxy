@@ -5,7 +5,11 @@
 		<h3>This site includes several services</h3>
 		<h4>You can visit it by links:</h4>
 
-		@foreach (var link in Model.Links) {
-			<a href="@link.Uri">@link.Name</a> <br /> @link.Description <hr />
+		@foreach (var link in Model.Links)
+		{
+			@if (link.Enabled)
+			{
+				<a href="@link.Uri">@link.Name</a> <br /> @link.Description <hr />
+			}
 		}
 	</div>
